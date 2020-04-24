@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme"
+        android:id="@+id/toolbar">
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/levelNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="200sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="72dp"
+        android:layout_height="87dp"
+        android:onClick="nextTabbed"
+        android:src="@drawable/ic_navigate_next_black_24dp"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/custom_button"
+        android:layout_marginRight="20dp"/>
+
+    <ImageButton
+        android:id="@+id/previousButton"
+        android:layout_width="72dp"
+        android:layout_height="87dp"
+        android:layout_centerVertical="true"
+        android:onClick="previousTabbed"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/custom_button"
+        android:src="@drawable/ic_navigate_before_black_24dp"/>
+<!--    button uzunlukları wrapconten olmalı-->
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Oyna"
+        android:onClick="playTabbed"
+        android:background="@color/redd"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/levelNumber"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5139815030095193/4665667736">
+    </com.google.android.gms.ads.AdView>
+    <!--        ca-app-pub-3940256099942544/6300978111-->
+
+    <ImageView
+        android:id="@+id/backImageforColor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/toolbar">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/levelImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/toolbar">
+    </ImageView>
+
+</RelativeLayout>

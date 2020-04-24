@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">200 IQ</string>
+    <string name="play">Oyna</string>
+    <string name="answer">Cevapla</string>
+    <string name="hint">İpucu</string>
+    <string name="show_hint">İpucu Göster</string>
+    <string name="accept">Onayla</string>
+    <string name="cancel">İptal</string>
+    <string name="congratulation">Tebrikler !!!</string>
+    <string name="game_finished">"Oyun bitti, yeni bölümler için oyunu güncelleyin veya beklemede kalın :)"</string>
+    <string name="wrong_answer">Yanlış Cevap</string>
+
+</resources>
